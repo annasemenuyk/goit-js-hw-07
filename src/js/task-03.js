@@ -13,15 +13,18 @@ const images = [
   },
 ];
 
-const imgEl = document.querySelector('#gallery');
-imgEl.classList.add('item-gallery');
-const makeImgGallery = ({ url, alt })=>{
-  return
-   `<li>
-     <img src='${url}' alt='${alt}'/>
-  </li>`
+    const galleryMarkup = markup => {
+      const { url, alt } = markup;
+      return`<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`
  };
- const makeListGallery = images.map(makeImgGallery)
- .join('');
- imgEl.insertAdjacentHTML('beforeend', makeListGallery,);
-
+ console.log(galleryMarkup);
+ const galleryMarkupUl = document.querySelector('#gallery');
+ const galleryMarkupEl= images.map(galleryMarkup).join('');
+ console.log(galleryMarkupEl);
+ galleryMarkupUl.insertAdjacentHTML('afterbegin',galleryMarkupEl);
+galleryMarkupU.setAttribute("style", "list-style-type:none; display: flex;");
+galleryMarkupU.style.listStyle ='none';
+galleryMarkupU.style.displey ='flex';
+galleryMarkupU.style.justifyContent ='space-around'; 
+galleryMarkupU.style.marginTop ='20 px';
+galleryMarkupU.style.padding ='0';

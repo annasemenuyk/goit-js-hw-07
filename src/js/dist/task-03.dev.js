@@ -10,15 +10,21 @@ var images = [{
   url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
   alt: 'Group of Horses Running'
 }];
-var imgEl = document.querySelector('#gallery');
-imgEl.classList.add('item-gallery');
 
-var makeImgGallery = function makeImgGallery(_ref) {
-  var url = _ref.url,
-      alt = _ref.alt;
-  return;
-  "<li>\n     <img src='".concat(url, "' alt='").concat(alt, "'/>\n  </li>");
+var galleryMarkup = function galleryMarkup(markup) {
+  var url = markup.url,
+      alt = markup.alt;
+  return "<li><img src=\"".concat(url, "\" alt=\"").concat(alt, "\" width = 200 height = 150></li>");
 };
 
-var makeListGallery = images.map(makeImgGallery).join('');
-imgEl.insertAdjacentHTML('beforeend', makeListGallery);
+console.log(galleryMarkup);
+var galleryMarkupUl = document.querySelector('#gallery');
+var galleryMarkupEl = images.map(galleryMarkup).join('');
+console.log(galleryMarkupEl);
+galleryMarkupUl.insertAdjacentHTML('afterbegin', galleryMarkupEl);
+galleryMarkupU.setAttribute("style", "list-style-type:none; display: flex;");
+galleryMarkupU.style.listStyle = 'none';
+galleryMarkupU.style.displey = 'flex';
+galleryMarkupU.style.justifyContent = 'space-around';
+galleryMarkupU.style.marginTop = '20 px';
+galleryMarkupU.style.padding = '0';
