@@ -22,9 +22,10 @@ const images = [
  const galleryMarkupEl= images.map(galleryMarkup).join('');
  console.log(galleryMarkupEl);
  galleryMarkupUl.insertAdjacentHTML('afterbegin',galleryMarkupEl);
-galleryMarkupU.setAttribute("style", "list-style-type:none; display: flex;");
-galleryMarkupU.style.listStyle ='none';
-galleryMarkupU.style.displey ='flex';
-galleryMarkupU.style.justifyContent ='space-around'; 
-galleryMarkupU.style.marginTop ='20 px';
-galleryMarkupU.style.padding ='0';
+
+galleryMarkupUl.setAttribute("style", "list-style-type:none; display: flex;");
+galleryMarkupUl.style.listStyle ='none';
+galleryMarkupUl.style.displey ='flex';
+galleryMarkupUl.style.justifyContent ='space-around'; 
+galleryMarkupUl.style.marginTop ='20 px';
+galleryMarkupUl.style.padding ='0';
