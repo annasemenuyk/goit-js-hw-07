@@ -1,3 +1,5 @@
+"use strict";
+
 /* Напиши скрипт создания и очистки коллекции элементов. 
 Пользователь вводит количество элементов в input и нажимает кнопку Создать, 
 после чего рендерится коллекция.
@@ -14,25 +16,27 @@
 Каждый следующий div после первого, 
 должен быть шире и выше предыдущего на 10px
 Создай функцию destroyBoxes(), которая очищает div#boxes. */
-const refs = {
-    render : document.querySelector('[data-action="render"]'),
-    destroy : document.querySelector('[data-action="destroy"]'),
-    boxes : document.querySelector("#boxes"),
+var refs = {
+  render: document.querySelector('[data-action="render"]'),
+  destroy: document.querySelector('[data-action="destroy"]'),
+  boxes: document.querySelector("#boxes")
 };
 refs.render.addEventListener("click", getAmount);
 refs.destroy.addEventListener("click", destroyBoxes);
 
 function getAmount() {
-  const amount = +document.querySelector("#controls input").value;
+  var amount = +document.querySelector("#controls input").value;
   createBoxes(amount);
 }
+
 function createBoxes(amount) {
-    const basicSize = 30;
-    let fragment = document.createDocumentFragment();
-  for (let i = 0; i < amount; i++) {
-    let size = basicSize + i * 10;
-    let div = document.createElement('div');
-    div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba( ${random()} , ${random()} , ${random()} )`;
+  var basicSize = 30;
+  var fragment = document.createDocumentFragment();
+
+  for (var i = 0; i < amount; i++) {
+    var size = basicSize + i * 10;
+    var div = document.createElement('div');
+    div.style.cssText = "width: ".concat(size, "px; height: ").concat(size, "px; background-color: rgba( ").concat(random(), " , ").concat(random(), " , ").concat(random(), " )");
     fragment.appendChild(div);
   }
 
@@ -40,7 +44,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-    refs.boxes.innerHTML = "";
+  refs.boxes.innerHTML = "";
 }
 
 function random() {
