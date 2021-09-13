@@ -1,3 +1,5 @@
+"use strict";
+
 /* Напиши скрипт, который бы при потере фокуса на инпуте, 
 проверял его содержимое на правильное количество символов.
 <input
@@ -22,20 +24,18 @@
 #validation-input.invalid {
   border-color: #f44336;
 } */
- const refs = {
-   nameInput: document.querySelector ('#validation-input')
+var refs = {
+  nameInput: document.querySelector('#validation-input')
 };
-document.getElementById("validation-input").onblur = function() {
-    console.log(refs.nameInput.value.length);
-    if (refs.nameInput.getAttribute('data-length') > refs.nameInput.value.length) { 
-      refs.nameInput.classList.remove('valid');
-      refs.nameInput.classList.add('invalid');
-    } else {
-      refs.nameInput.classList.remove('invalid');
-      refs.nameInput.classList.add('valid');
-    }
-  };
 
+document.getElementById("validation-input").onblur = function () {
+  console.log(refs.nameInput.value.length);
 
-
-  
+  if (refs.nameInput.getAttribute('data-length') > refs.nameInput.value.length) {
+    refs.nameInput.classList.remove('valid');
+    refs.nameInput.classList.add('invalid');
+  } else {
+    refs.nameInput.classList.remove('invalid');
+    refs.nameInput.classList.add('valid');
+  }
+};
