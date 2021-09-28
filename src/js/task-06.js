@@ -22,20 +22,30 @@
 #validation-input.invalid {
   border-color: #f44336;
 } */
- const refs = {
-   nameInput: document.querySelector ('#validation-input')
-};
-document.getElementById("validation-input").onblur = function() {
-    console.log(refs.nameInput.value.length);
-    if (refs.nameInput.getAttribute('data-length') > refs.nameInput.value.length) { 
-      refs.nameInput.classList.remove('valid');
-      refs.nameInput.classList.add('invalid');
-    } else {
-      refs.nameInput.classList.remove('invalid');
-      refs.nameInput.classList.add('valid');
-    }
-  };
-
-
-
-  
+  let nameInput = document.querySelector ('#validation-input');//доступ до поля введення
+  let inValidInputLenght = nameInput.getAttribute("data-length");//максимальне число введення
+  let inputLength = nameInput.getAttribute(nameInput.value.length);// довжина значення
+/* console.log(inValidInputLenght)
+console.log(inputLength) */
+//ф-ція яка перевіряє к-сть символів введених в поле
+ nameInput.addEventListener('input', el => {
+//валідна кількість =6
+    if (el.target.value.length == inValidInputLenght){
+      nameInput.classList.add('valid');
+      nameInput.classList.remove("invalid")
+      //console.log( nameInput.classList)
+    } 
+    //не валідна кількість 
+      else {  
+      if (el.target.value.length !== inValidInputLenght && el.target.value.length !== 0){ 
+      nameInput.classList.remove('valid');
+      nameInput.classList.add("invalid")
+      //console.log( nameInput.classList)
+      }
+      // не введені данні без класу
+        else{
+      nameInput.classList.remove('valid');
+      nameInput.classList.remove('invalid')
+      }
+    };
+})  
