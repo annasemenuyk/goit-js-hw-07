@@ -28,7 +28,7 @@
 /* console.log(inValidInputLenght)
 console.log(inputLength) */
 //ф-ція яка перевіряє к-сть символів введених в поле
- nameInput.addEventListener('input', el => {
+ nameInput.addEventListener('blur', el => {
 //валідна кількість =6
     if (el.target.value.length == inValidInputLenght){
       nameInput.classList.add('valid');

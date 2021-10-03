@@ -34,7 +34,7 @@ var inputLength = nameInput.getAttribute(nameInput.value.length); // довжи�
 console.log(inputLength) */
 //ф-ція яка перевіряє к-сть символів введених в поле
 
-nameInput.addEventListener('input', function (el) {
+nameInput.addEventListener('blur', function (el) {
   //валідна кількість =6
   if (el.target.value.length == inValidInputLenght) {
     nameInput.classList.add('valid');
