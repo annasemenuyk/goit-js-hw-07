@@ -8,19 +8,16 @@ const {list, modal, button, modalClose, modalImage, modalOverlay} =refs;
 //console.log(list, modal, button);
 // Создание и рендер разметки по массиву данных и предоставленному шаблону.
 const item =
-    ` <li class="gallery__item">
-        <a
-          class="gallery__link"
-          href="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
-        >
-          <img
-            class="gallery__image"
-            src="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546__340.jpg"
-            data-source="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
-            alt="Tulips"
-          />
-        </a>
-      </li> `
+     ` <div class="gallery__item">
+  <a class="gallery__link" href="large-image.jpg">
+    <img
+      class="gallery__image"
+      src="small-image.jpg"
+      data-source="large-image.jpg"
+      alt="Image description"
+    />
+  </a>
+</div>`
 function createItems (arrey) {
     return arrey
     .map((el)=>{
