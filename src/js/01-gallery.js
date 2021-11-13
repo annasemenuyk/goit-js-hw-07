@@ -3,7 +3,7 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 import refs from './refs.js'
-//console.log(refs);
+console.log(refs);
 const {list, modal, button, modalClose, modalImage, modalOverlay} =refs;
 //console.log(list, modal, button);
 // Создание и рендер разметки по массиву данных и предоставленному шаблону.
