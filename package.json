@@ -1,0 +1,25 @@
+{
+  "name": "goit-js-hw-07",
+  "version": "1.0.0",
+  "description": "Критерии приема\r Создан репозиторий goit-js-hw-07.\r При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую страницу на GitHub Pages.\r При посещении живой страницы задания, в консоли нету ошибок и предупреждений.\r Имена переменных и функций понятные, описательные.\r Код отформатирован Prettier.\r Стартовые файлы\r Скачай стартовые файлы с базовой разметкой, готовыми стилями и подключенными файлами скриптов для каждого задания. Скопируй их себе в проект.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annasemenuyk/goit-js-hw-07.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annasemenuyk/goit-js-hw-07/issues"
+  },
+  "homepage": "https://github.com/annasemenuyk/goit-js-hw-07#readme",
+  "dependencies": {
+    "basiclightbox": "^5.0.4",
+    "validator": "^13.7.0"
+  }
+}
