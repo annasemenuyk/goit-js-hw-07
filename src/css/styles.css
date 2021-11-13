@@ -40,18 +40,5 @@
 }
 
 .gallery__link:hover {
-    cursor: zoom-in;
-  }
-.validation-input {
-  border: 3px solid #bdbdbd;
-  outline-style: none;
-}
-
-.validation-input.valid {
-  border-color: #4caf50;
-  outline-style: none;
-}
-
-.validation-input.invalid {
-  border-color: #f44336;
+  cursor: zoom-in;
 }
