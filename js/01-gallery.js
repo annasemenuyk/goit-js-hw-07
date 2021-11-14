@@ -48,7 +48,7 @@ function onGoLink (event) {
    event.preventDefault()
   };
 //   const itemList = document.querySelector('.gallery__item')
- import basicLightbox from '../node_modules/basiclightbox';
+ //import basicLightbox from '../node_modules/basiclightbox';
 //   itemList.addEventListener ('click', ((instance)=>{
 //     const basicLightbox = require('basiclightbox');
 //     const instance = basicLightbox.create(`
@@ -61,7 +61,7 @@ function onGoLink (event) {
 // instance.show()
 // }))
 // const basicLightbox = require('basiclightbox');
-import basicLightbox from '../node_modules/basiclightbox';
+import basicLightbox from 'basiclightbox'
     const instance = basicLightbox.create(`
   <div class="modal">
       <p>
