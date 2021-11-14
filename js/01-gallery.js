@@ -48,7 +48,7 @@ function onGoLink (event) {
    event.preventDefault()
   };
 
-    const basicLightbox = require('basiclightbox');
+    const basicLightbox = require('node_modules/basiclightbox');
     const instance = basicLightbox.create(`
   <div class="modal">
       <p>
