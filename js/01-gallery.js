@@ -51,7 +51,7 @@ function onGoLink (event) {
 //  //import basicLightbox from '../node_modules/basiclightbox';
 
 //   itemList.addEventListener ('click', (instance)=>{
-    import * as basicLightbox from 'basiclightbox'
+   // import * as basicLightbox from 'basiclightbox'
   //   const instance = basicLightbox.create(`
   //   <div class="modal">
   //       <p>
