@@ -47,17 +47,16 @@ list.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
-   const itemList = document.querySelector('.gallery__item')
+  import {basicLightbox} from 'basiclightbox';
+  const itemList = document.querySelector('.gallery__item')
   itemList.addEventListener ('click',
-  _.basicLightbox(instance))
-
-  const instance = basicLightbox.create(`
-      <div class="modal">
-          <p>
-          ${description}
-          </p>
-      </div>
-  `)
-  
- instance.show()
-  
+  _.basicLightbox((instance)=>{
+    const instance = basicLightbox.create(`
+    <div class="modal">
+        <p>
+       {description}
+        </p>
+    </div>
+`)
+instance.show()
+  }))
