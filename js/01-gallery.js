@@ -48,7 +48,7 @@ function onGoLink (event) {
    event.preventDefault()
   };
 //   const itemList = document.querySelector('.gallery__item')
- import basicLightbox from 'basiclightbox';
+ import basicLightbox from '/basiclightbox';
 //   itemList.addEventListener ('click', ((instance)=>{
 //     const basicLightbox = require('basiclightbox');
 //     const instance = basicLightbox.create(`
