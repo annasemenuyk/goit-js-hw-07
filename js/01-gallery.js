@@ -23,20 +23,23 @@ const itemCards =
 function createItemCards (arrey){
     return arrey.map((el)=>{
         const {description, original, preview} = el
-        return console.log (createItemCards)
-    //         return`
-    //         <div class="gallery__item">
-    //         <a class="gallery__link" href=${original}>
-    //           <img
-    //             class="gallery__image"
-    //             src=${preview}
-    //             data-source=${original}
-    //             alt=${description}
-    //           />
-    //         </a>
-    //       </div>`
+        //console.log (el)
+            return`
+            <div class="gallery__item">
+            <a class="gallery__link" href=${original}>
+              <img
+                class="gallery__image"
+                src=${preview}
+                data-source=${original}
+                alt=${description}
+              />
+            </a>
+          </div>`
   })
-    // .join('')
+   .join('')
 }
-//const markup = createitemCards (galleryItems);
+const markup = createItemCards (galleryItems);
 // console.log (markup);
+list = document.querySelector('gallery')
+list.insertAdjacentHTML("afterbegin", markup)
+const list = [...list.children]
