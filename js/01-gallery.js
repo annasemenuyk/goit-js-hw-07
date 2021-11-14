@@ -47,19 +47,12 @@ list.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
-//   const itemList = document.querySelector('.gallery__item');
+const itemList = document.querySelector('.gallery__item');
 //  //import basicLightbox from '../node_modules/basiclightbox';
 
-//   itemList.addEventListener ('click', (instance)=>{
-   // import * as basicLightbox from 'basiclightbox'
-  //   const instance = basicLightbox.create(`
-  //   <div class="modal">
-  //       <p>
-  //      {description}
-  //       </p>
-  //   </div>
-  // `)
-  // instance.show()
-//   }
-//  )
-
+ itemList.addEventListener ('click', onModal)
+function  onModal (event){
+   instance = basicLightbox.create(`
+   <img src="assets/images/image.png" width="800" height="600">
+`)}
+console.log(onModal)
