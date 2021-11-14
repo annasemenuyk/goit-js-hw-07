@@ -21,9 +21,21 @@ const itemCards =
   </a>
 </div> `
 function createitemCards (arrey){
-    return arrey
-    .map((el)=>{
-        const{description, original, preview} = el
-      console.log(description, original, preview);
+    return arrey.map((el)=>{
+        const {description, original, preview} = el
+            return`
+            <div class="gallery__item">
+            <a class="gallery__link" href=${original}>
+              <img
+                class="gallery__image"
+                src=${preview}
+                data-source=${original}
+                alt=${description}
+              />
+            </a>
+          </div>`
     })
+    .join('')
 }
+const markup = createitemCards (galleryItems);
+console.log (markup);
