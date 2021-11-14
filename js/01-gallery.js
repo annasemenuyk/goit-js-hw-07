@@ -61,7 +61,8 @@ function onGoLink (event) {
 // instance.show()
 // }))
 // const basicLightbox = require('basiclightbox');
-import basicLightbox from 'basiclightbox'
+import * as basicLightbox from 'basiclightbox'
+// import basicLightbox from 'basiclightbox'
     const instance = basicLightbox.create(`
   <div class="modal">
       <p>
