@@ -23,7 +23,7 @@ const itemCards =
 function createitemCards (arrey){
     return arrey.map((el)=>{
         const {description, original, preview} = el
-        return console.log (el)
+        return console.log (arrey)
     //         return`
     //         <div class="gallery__item">
     //         <a class="gallery__link" href=${original}>
