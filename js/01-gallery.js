@@ -9,7 +9,7 @@ console.log(galleryItems);
 // description: 
 // original: big
 // preview: small
-const itemCards =
+const item =
 ` <div class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
     <img
@@ -42,4 +42,4 @@ const markup = createItemCards (galleryItems);
 // console.log (markup);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
-const list = [...list.children];
+const items = [...list.children];
