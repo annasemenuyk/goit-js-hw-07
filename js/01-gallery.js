@@ -43,3 +43,7 @@ const markup = createItemCards (galleryItems);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
+list.addEventListener('click', onGoLink)
+function onGoLink (event) {
+   event.preventDefault()
+  };
