@@ -60,5 +60,5 @@ function onGoLink (event) {
       </div>
   `)
   
-  instance.show()
+ // instance.show()
   
