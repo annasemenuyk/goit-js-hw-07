@@ -50,12 +50,15 @@ function onGoLink (event) {
   const itemList = document.querySelector('.gallery__item');
  //import basicLightbox from '../node_modules/basiclightbox';
  import * as basicLightbox from 'basiclightbox'
-  itemList.addEventListener ('click', (instance))
-   const instance = basicLightbox.create(`
-  <div class="modal">
-      <p>
-     {description}
-      </p>
-  </div>
-`)
-instance.show()
+  itemList.addEventListener ('click', (instance)=>{
+    const instance = basicLightbox.create(`
+    <div class="modal">
+        <p>
+       {description}
+        </p>
+    </div>
+  `)
+  instance.show()
+  }
+ )
+
