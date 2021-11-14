@@ -40,6 +40,6 @@ function createItemCards (arrey){
 }
 const markup = createItemCards (galleryItems);
 // console.log (markup);
-list = document.querySelector('galleryItems')
-list.insertAdjacentHTML("afterbegin", markup)
-const list = [...list.children]
+const list = document.querySelector('.gallery');
+list.insertAdjacentHTML("afterbegin", markup);
+const list = [...list.children];
