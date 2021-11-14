@@ -6,6 +6,9 @@ console.log(galleryItems);
 // import * as basicLightbox from 'basiclightbox';// 
 //Создание и рендер разметки по массиву данных galleryItems и 
 //предоставленному шаблону элемента галереи.
+// description: 
+// original: big
+// preview: small
 const itemCards =
 ` <div class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
@@ -17,3 +20,10 @@ const itemCards =
     />
   </a>
 </div> `
+function createitemCards (arrey){
+    return arrey
+    .map((el)=>{
+        const{description, original, preview} = el
+      console.log(description, original, preview);
+    })
+}
