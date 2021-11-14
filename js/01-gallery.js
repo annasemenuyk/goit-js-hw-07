@@ -52,14 +52,14 @@ function onGoLink (event) {
 
 //   itemList.addEventListener ('click', (instance)=>{
     import * as basicLightbox from 'basiclightbox'
-    const instance = basicLightbox.create(`
-    <div class="modal">
-        <p>
-       {description}
-        </p>
-    </div>
-  `)
-  instance.show()
+  //   const instance = basicLightbox.create(`
+  //   <div class="modal">
+  //       <p>
+  //      {description}
+  //       </p>
+  //   </div>
+  // `)
+  // instance.show()
 //   }
 //  )
 
