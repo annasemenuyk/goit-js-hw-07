@@ -47,3 +47,5 @@ list.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
+  list.addEventListener ('click',
+  _.basicLightbox)
