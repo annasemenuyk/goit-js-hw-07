@@ -47,8 +47,9 @@ list.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
-  import {basicLightbox} from '../node_modules/basiclightbox'
-  list.addEventListener ('click',
+  import {basicLightbox} from '../node_modules/basiclightbox/src/scripts/main';
+  const itemList = document.querySelector('.gallery__item')
+  itemList.addEventListener ('click',
   _.basicLightbox(instance))
 
   const instance = basicLightbox.create(`
