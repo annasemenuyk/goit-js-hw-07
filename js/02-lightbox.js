@@ -38,37 +38,7 @@ const markup = createItemCards (galleryItems);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
-list.addEventListener('click', onOpenModal)
-function onOpenModal(event) {
-  if (event.target.nodeName === 'LI' || event.target.nodeName === 'A' || event.target.nodeName === 'IMG') {
-  event.preventDefault();// відміна переходу по ссилці
-
-  modal.classList.add('is-open') //присвоєння класу відкриття модалки
-  modalImage.src = event.target.dataset.source //заміна значення картинки
-  modalImage.alt = event.target.alt
-  window.addEventListener('keydown', onEscKeyPress);
-  window.addEventListener('keydown', onArrowLeftPress);
-  window.addEventListener('keydown', onArrowRightPress);
-  }
-} 
-//Закрытие модального окна по клику на кнопку button[data-action="close-lightbox"].
-modalClose.addEventListener('click', onModalCloseClick) 
-function onModalCloseClick (event){      
-  modal.classList.remove('is-open') //закриття модального вікна
-  modalImage.src = '' // очищення значення картинки
-  modalImage.alt = ''
-  window.removeEventListener('keydown', onEscKeyPress);
-  window.removeEventListener('keydown', onArrowLeftPress);
-  window.removeEventListener('keydown', onArrowRightPress);
-}
-//Закрытие модального окна по клику на div.lightbox__overlay.
-modal.addEventListener('click', onModalCloseClick)
-
-//Закрытие модального окна по нажатию клавиши ESC
-function onEscKeyPress(evt) {
-  const ESC_KEY_CODE = 'Escape';
-  const pressEscKey = evt.code === ESC_KEY_CODE;
-  if (pressEscKey) {
-    onModalCloseClick();
-  }
-}
+list.addEventListener('click', onGoLink)
+function onGoLink (event) {
+   event.preventDefault()
+  };
