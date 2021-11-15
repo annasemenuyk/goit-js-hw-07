@@ -70,12 +70,12 @@ function onOpenModal(event) {
   modal.alt = event.target.alt
    }
 } ;
-listItem.addEventListener('click', onModalCloseClick)
-function onModalCloseClick (){
-  {      
-    basicLightbox.remove() //закриття модального вікна
-    modal.src = '' // очищення значення картинки
-    modal.alt = ''
-  }
-}
+// listItem.addEventListener('click', onModalCloseClick)
+// function onModalCloseClick (){
+//   {      
+//     basicLightbox.remove() //закриття модального вікна
+//     modal.src = '' // очищення значення картинки
+//     modal.alt = ''
+//   }
+// }
 console.log(onOpenModal)
