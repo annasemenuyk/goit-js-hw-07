@@ -60,15 +60,16 @@ instance.show()
 //    instance = basicLightbox.create(`
 //    <img src="assets/images/image.png" width="800" height="600">
 // `)}
-list.addEventListener('click', onOpenModal, onModalCloseClick)
+list.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
-  if (event.target.nodeName === 'DIV' || event.target.nodeName === 'A' || event.target.nodeName === 'IMG') {
+  if ( event.target.nodeName === 'IMG') {
   event.preventDefault();// відміна переходу по ссилці
   instance// відкриття модалки
   modal.src = event.target.dataset.source //заміна значення картинки
   modal.alt = event.target.alt
    }
-} 
+} ;
+list.addEventListener('click', onModalCloseClick)
 function onModalCloseClick (event){
   {      
     basicLightbox.remove(instance) //закриття модального вікна
