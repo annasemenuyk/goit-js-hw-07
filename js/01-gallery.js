@@ -65,9 +65,7 @@ list.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
   if (event.target.nodeName === 'DIV' || event.target.nodeName === 'A' || event.target.nodeName === 'IMG') {
   event.preventDefault();// відміна переходу по ссилці
-  instance = basicLightbox.create(`
-  <img src="assets/images/image.png" width="800" height="600">
-`) // відкриття модалки
+  instance// відкриття модалки
    }
 } 
 console.log(onOpenModal)
