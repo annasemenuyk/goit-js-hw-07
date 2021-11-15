@@ -61,21 +61,22 @@ instance.show()
 //    instance = basicLightbox.create(`
 //    <img src="assets/images/image.png" width="800" height="600">
 // `)}
+
 listItem.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
   if ( event.target.nodeName === 'IMG') {
   event.preventDefault();// відміна переходу по ссилці
   instance// відкриття модалки
-  modal.src = event.target.dataset.source //заміна значення картинки
-  modal.alt = event.target.alt
+  listItem.src = event.target.dataset.source //заміна значення картинки
+  listItem.alt = event.target.alt
    }
 } ;
 // listItem.addEventListener('click', onModalCloseClick)
 // function onModalCloseClick (){
 //   {      
 //     basicLightbox.remove() //закриття модального вікна
-//     modal.src = '' // очищення значення картинки
-//     modal.alt = ''
+//     listItem.src = '' // очищення значення картинки
+//     listItem.alt = ''
 //   }
 // }
 console.log(onOpenModal)
