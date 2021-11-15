@@ -43,7 +43,8 @@ const markup = createItemCards (galleryItems);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
-list.addEventListener('click', onGoLink)
+const listItem = document.querySelector('.gallery__image');
+listItem.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
@@ -60,7 +61,7 @@ instance.show()
 //    instance = basicLightbox.create(`
 //    <img src="assets/images/image.png" width="800" height="600">
 // `)}
-list.addEventListener('click', onOpenModal)
+listItem.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
   if ( event.target.nodeName === 'IMG') {
   event.preventDefault();// відміна переходу по ссилці
@@ -69,7 +70,7 @@ function onOpenModal(event) {
   modal.alt = event.target.alt
    }
 } ;
-list.addEventListener('click', onModalCloseClick)
+listItem.addEventListener('click', onModalCloseClick)
 function onModalCloseClick (event){
   {      
     basicLightbox.remove(instance) //закриття модального вікна
