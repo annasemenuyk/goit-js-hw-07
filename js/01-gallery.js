@@ -50,10 +50,10 @@ function onGoLink (event) {
   };
 const itemList = document.querySelector('.gallery');
 //  //import basicLightbox from '../node_modules/basiclightbox';
+import * as basicLightbox from 'basiclightbox'
 const instance = basicLightbox.create(`
 <img src="assets/images/image.png" width="800" height="600">
 `)
-
 instance.show()
 // itemList.addEventListener ('click', onClickModal)
 // function  onClickModal (event){
