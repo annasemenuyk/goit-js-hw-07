@@ -55,10 +55,19 @@ const instance = basicLightbox.create(`
     </div>
 `)
 instance.show()
- itemList.addEventListener ('click', onClickModal)
-function  onClickModal (event){
-  event.target;
-   instance = basicLightbox.create(`
-   <img src="assets/images/image.png" width="800" height="600">
-`)}
-console.log(onModal)
+// itemList.addEventListener ('click', onClickModal)
+// function  onClickModal (event){
+//   event.target;
+//    instance = basicLightbox.create(`
+//    <img src="assets/images/image.png" width="800" height="600">
+// `)}
+list.addEventListener('click', onOpenModal)
+function onOpenModal(event) {
+  if (event.target.nodeName === 'DIV' || event.target.nodeName === 'A' || event.target.nodeName === 'IMG') {
+  event.preventDefault();// відміна переходу по ссилці
+  instance = basicLightbox.create(`
+  <img src="assets/images/image.png" width="800" height="600">
+`) // відкриття модалки
+   }
+} 
+console.log(onOpenModal)
