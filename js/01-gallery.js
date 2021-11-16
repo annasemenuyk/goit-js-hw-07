@@ -44,14 +44,15 @@ const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
 
-const itemList = document.querySelector('.gallery__image');
+const itemList = document.querySelector('.gallery__item');
 itemList.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
+  console.log(itemList)
 //  //import basicLightbox from '../node_modules/basiclightbox';
 //import * as basicLightbox from 'basiclightbox'
-const listItem = document.querySelector('.gallery__item');
+const listItem = document.querySelector('.gallery__image');
 console.log(listItem);
 const instance = basicLightbox.create(`
 <div class="modal">
