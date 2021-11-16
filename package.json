@@ -20,6 +20,7 @@
   "homepage": "https://github.com/annasemenuyk/goit-js-hw-07#readme",
   "dependencies": {
     "basiclightbox": "^5.0.4",
+    "simplelightbox": "^2.10.1",
     "validator": "^13.7.0"
   }
 }

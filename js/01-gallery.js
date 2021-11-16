@@ -43,11 +43,12 @@ const markup = createItemCards (galleryItems);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
+
 const listItem = document.querySelector('.gallery__image');
-listItem.addEventListener('click', onGoLink)
-function onGoLink (event) {
-   event.preventDefault()
-  };
+// listItem.addEventListener('click', onGoLink)
+// function onGoLink (event) {
+//    event.preventDefault()
+//   };
 const itemList = document.querySelector('.gallery');
 //  //import basicLightbox from '../node_modules/basiclightbox';
 //import * as basicLightbox from 'basiclightbox'
@@ -64,6 +65,7 @@ instance.show()
 
 listItem.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
+  event.preventDefault()
   if ( event.target.nodeName === 'IMG') {
   event.preventDefault();// відміна переходу по ссилці
   instance// відкриття модалки
