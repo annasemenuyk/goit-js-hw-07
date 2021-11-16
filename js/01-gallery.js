@@ -44,7 +44,7 @@ const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
 
-const itemList = document.querySelector('.gallery__item');
+const itemList = document.querySelector('.gallery__link');
 itemList.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
