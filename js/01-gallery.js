@@ -75,7 +75,7 @@ function onOpenModal(event) {
  //заміна значення картинки
   }
 };
-console.log(onOpenModal)
+console.log('event',onOpenModal)
  modal=document.querySelector('.modal')
  console.log(modal)
 // modal.addEventListener('click', onModalCloseClick)
