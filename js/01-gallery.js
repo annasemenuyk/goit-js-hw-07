@@ -46,9 +46,12 @@ const items = [...list.children];
 
 const linkList = document.querySelector('.gallery__link');
 const listItem = document.querySelector('.gallery__image');
+//Реализация делегирования на div.gallery и получение url большого изображения
 list.addEventListener(`click`, onGoLink)
 function onGoLink (event) {
    event.preventDefault()
+   if ( event.target.nodeName === 'IMG') {
+    return;}
   };
   console.log(linkList)
   console.log(listItem);
