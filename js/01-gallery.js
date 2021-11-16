@@ -53,7 +53,7 @@ function noGoLink (event) {
    if ( event.target.nodeName === 'IMG') {
     return;}
   };
-  console.log('event.target.nodeName'event.target.nodeName)
+  console.log('event.target.nodeName')
   console.log(linkList)
   console.log(listItem);
 //  //import basicLightbox from '../node_modules/basiclightbox';
