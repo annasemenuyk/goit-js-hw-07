@@ -74,7 +74,7 @@ function onOpenModal(event) {
 // listItem.addEventListener('click', onModalCloseClick)
 // function onModalCloseClick (){
 //   {      
-//     basicLightbox.remove() //закриття модального вікна
+//     instance.close() //закриття модального вікна
 //     listItem.src = '' // очищення значення картинки
 //     listItem.alt = ''
 //   }
