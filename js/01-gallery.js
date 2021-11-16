@@ -81,7 +81,7 @@ function onOpenModal() {
   //}
 };
 console.log(`click`,onOpenModal)
- modal=document.querySelector('.modal')
+ //modal=document.querySelector('.modal')
  console.log(modal)
 // modal.addEventListener('click', onModalCloseClick)
 
