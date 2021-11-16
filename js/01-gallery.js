@@ -55,11 +55,12 @@ function noGoLink (event) {
 function originalImg (event) {
   if ( event.target.nodeName === 'A'||event.target.nodeName === 'IMG') {
    return;
- }
- import  basicLightbox from 'basiclightbox'
- instance = basicLightbox.create(`
-   <img src="assets/images/image.png" width="800" height="600">
- `) //заміна значення картинки
+  } 
+   instance=basicLightbox.create(`
+       <img src="assets/images/image.png" width="800" height="600">
+      `); 
+ instance.src = event.target.data-source; //заміна значення картинки
+ instance.alt = event.target.alt
   };
  const instance = basicLightbox.create(`
  <div class="modal">
@@ -67,22 +68,14 @@ function originalImg (event) {
  </div>
  `); 
 
- imageGallery.addEventListener (`click`, onClickModal)
-// // function  onClickModal (event){
-// //   event.target;
-// //    instance = basicLightbox.create(`
-// //    <img src="assets/images/image.png" width="800" height="600">
-// // `)}
+ imageGallery.addEventListener ('click', onClickModal)
+function  onClickModal (event){
+if ( event.target.nodeName === 'IMG'||event.target.nodeName === 'A') {
+  return;
+ }
+  instance.show();
+}
 
-// listItem.addEventListener(`click`, onOpenModal)
-// function onOpenModal() {
-  
-//   // if ( event.target.nodeName === 'IMG'||event.target.nodeName === 'A') {
-//   //  return
-//    instance.show()// відкриття модалки
-//  //заміна значення картинки
-//   //}
-// };
 // console.log(`click`,onOpenModal)
 //  //modal=document.querySelector('.modal')
 //  //console.log(modal)
