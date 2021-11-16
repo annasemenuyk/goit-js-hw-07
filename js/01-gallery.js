@@ -44,15 +44,16 @@ const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
 
-const itemList = document.querySelector('.gallery__link');
-itemList.addEventListener('click', onGoLink)
+const linkList = document.querySelector('.gallery__link');
+const listItem = document.querySelector('.gallery__image');
+list.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
   console.log(itemList)
 //  //import basicLightbox from '../node_modules/basiclightbox';
 //import * as basicLightbox from 'basiclightbox'
-const listItem = document.querySelector('.gallery__image');
+
 console.log(listItem);
 const instance = basicLightbox.create(`
 <div class="modal">
@@ -71,23 +72,22 @@ listItem.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
   event.preventDefault()
   if ( event.target.nodeName === 'IMG') {
-  event.preventDefault();// відміна переходу по ссилці
-  instance.show()// відкриття модалки
-//   instance = basicLightbox.create(`
-// <img src="assets/images/image.png" width="800" height="600">
-// `)//заміна значення картинки
-  
-   }
+    const el = basicLightbox.create(`
+<img src="assets/images/image.png" width="800" height="600">
+`)
+   return instance.show(el)// відкриття модалки
+//заміна значення картинки
+  }
 } ;
-// modal=document.querySelector('.modal')
+console.log(onOpenModal)
+ modal=document.querySelector('.modal')
+ console.log(modal)
 // modal.addEventListener('click', onModalCloseClick)
 
 listItem.addEventListener('click', ModalCloseClick)
 function ModalCloseClick (event){
-  { event.preventDefault();// відміна переходу по ссилці     
     instance.close() //закриття модального вікна
     listItem.src = '' // очищення значення картинки
     listItem.alt = ''
   }
-}
-console.log(onOpenModal)
+console.log(ModalCloseClick)
