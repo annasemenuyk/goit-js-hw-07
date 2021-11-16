@@ -74,7 +74,7 @@ function onOpenModal(event) {
   //  return
    instance.show()// відкриття модалки
  //заміна значення картинки
-  }
+  //}
 };
 console.log('event',onOpenModal)
  modal=document.querySelector('.modal')
