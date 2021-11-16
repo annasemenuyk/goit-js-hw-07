@@ -55,7 +55,7 @@ const itemList = document.querySelector('.gallery');
 const instance = basicLightbox.create(`
 <img src="assets/images/image.png" width="800" height="600">
 `)
-instance.show()
+
 // itemList.addEventListener ('click', onClickModal)
 // function  onClickModal (event){
 //   event.target;
@@ -68,9 +68,11 @@ function onOpenModal(event) {
   event.preventDefault()
   if ( event.target.nodeName === 'IMG') {
   event.preventDefault();// відміна переходу по ссилці
-  instance// відкриття модалки
-  listItem.src = event.target.dataset.source //заміна значення картинки
-  listItem.alt = event.target.alt
+  instance.show()// відкриття модалки
+  instance = basicLightbox.create(`
+<img src="assets/images/image.png" width="800" height="600">
+`)//заміна значення картинки
+  
    }
 } ;
 // listItem.addEventListener('click', onModalCloseClick)
