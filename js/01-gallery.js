@@ -50,11 +50,10 @@ list.addEventListener('click', onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
-  console.log(itemList)
+  console.log(linkList)
+  console.log(listItem);
 //  //import basicLightbox from '../node_modules/basiclightbox';
 //import * as basicLightbox from 'basiclightbox'
-
-console.log(listItem);
 const instance = basicLightbox.create(`
 <div class="modal">
   <img src="assets/images/image.png" width="800" height="600">
