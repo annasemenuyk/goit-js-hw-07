@@ -77,7 +77,8 @@ function onOpenModal(event) {
   
    }
 } ;
-listItem.addEventListener('click', onModalCloseClick)
+modal=document.querySelector('.modal')
+modal.addEventListener('click', onModalCloseClick)
 function onModalCloseClick (event){
   { event.preventDefault();// відміна переходу по ссилці     
     instance.close() //закриття модального вікна
