@@ -68,7 +68,7 @@ const instance = basicLightbox.create(`
 // `)}
 
 listItem.addEventListener(`click`, onOpenModal)
-function onOpenModal(event) {
+function onOpenModal() {
   
   // if ( event.target.nodeName === 'IMG'||event.target.nodeName === 'A') {
   //  return
