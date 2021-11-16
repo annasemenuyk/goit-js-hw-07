@@ -71,13 +71,10 @@ listItem.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
   event.preventDefault()
   if ( event.target.nodeName === 'IMG') {
-    const el = basicLightbox.create(`
-<img src="assets/images/image.png" width="800" height="600">
-`)
-   return instance.show(el)// відкриття модалки
-//заміна значення картинки
+   return instance.show()// відкриття модалки
+ //заміна значення картинки
   }
-} ;
+};
 console.log(onOpenModal)
  modal=document.querySelector('.modal')
  console.log(modal)
