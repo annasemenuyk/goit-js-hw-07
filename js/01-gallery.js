@@ -39,58 +39,59 @@ function createItemCards (arrey){
    .join('')
 }
 const markup = createItemCards (galleryItems);
-// console.log (markup);
+//  console.log (markup);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
 const items = [...list.children];
-
-const linkList = document.querySelector('.gallery__link');
-const listItem = document.querySelector('.gallery__image');
 //Реализация делегирования на div.gallery и получение url большого изображения
+const linkList = document.querySelector('.gallery__link');
+const imageGallery = document.querySelector('.gallery__image');
 list.addEventListener(`click`, noGoLink)
 function noGoLink (event) {
    event.preventDefault()
-   if ( event.target.nodeName === 'IMG') {
-  
-    return;
-  }
   };
-  console.log(`event`,event)
-  console.log(linkList)
-  console.log(listItem);
-//  //import basicLightbox from '../node_modules/basiclightbox';
-//import * as basicLightbox from 'basiclightbox'
-const instance = basicLightbox.create(`
-<div class="modal">
-  <img src="assets/images/image.png" width="800" height="600">
-</div>
-`); 
-
-// itemList.addEventListener (`click`, onClickModal)
-// function  onClickModal (event){
-//   event.target;
-//    instance = basicLightbox.create(`
-//    <img src="assets/images/image.png" width="800" height="600">
-// `)}
-
-listItem.addEventListener(`click`, onOpenModal)
-function onOpenModal() {
   
-  // if ( event.target.nodeName === 'IMG'||event.target.nodeName === 'A') {
-  //  return
-   instance.show()// відкриття модалки
- //заміна значення картинки
-  //}
-};
-console.log(`click`,onOpenModal)
- //modal=document.querySelector('.modal')
- //console.log(modal)
-// modal.addEventListener('click', onModalCloseClick)
+  list.addEventListener('click', originalImg)
+function originalImg (event) {
+  if ( event.target.nodeName === 'A'||event.target.nodeName === 'IMG') {
+   return;
+ }
+ import  basicLightbox from 'basiclightbox'
+ instance = basicLightbox.create(`
+   <img src="assets/images/image.png" width="800" height="600">
+ `) //заміна значення картинки
+  };
+ const instance = basicLightbox.create(`
+ <div class="modal">
+  <img src="assets/images/image.png" width="800" height="600">
+ </div>
+ `); 
 
-listItem.addEventListener('click', ModalCloseClick)
-function ModalCloseClick (event){
-    instance.close() //закриття модального вікна
-    listItem.src = '' // очищення значення картинки
-    listItem.alt = ''
-  }
-console.log(ModalCloseClick)
+ imageGallery.addEventListener (`click`, onClickModal)
+// // function  onClickModal (event){
+// //   event.target;
+// //    instance = basicLightbox.create(`
+// //    <img src="assets/images/image.png" width="800" height="600">
+// // `)}
+
+// listItem.addEventListener(`click`, onOpenModal)
+// function onOpenModal() {
+  
+//   // if ( event.target.nodeName === 'IMG'||event.target.nodeName === 'A') {
+//   //  return
+//    instance.show()// відкриття модалки
+//  //заміна значення картинки
+//   //}
+// };
+// console.log(`click`,onOpenModal)
+//  //modal=document.querySelector('.modal')
+//  //console.log(modal)
+// // modal.addEventListener('click', onModalCloseClick)
+
+// listItem.addEventListener('click', ModalCloseClick)
+// function ModalCloseClick (event){
+//     instance.close() //закриття модального вікна
+//     listItem.src = '' // очищення значення картинки
+//     listItem.alt = ''
+//   }
+// console.log(ModalCloseClick)
