@@ -46,7 +46,7 @@ const items = [...list.children];
 
 const linkList = document.querySelector('.gallery__link');
 const listItem = document.querySelector('.gallery__image');
-list.addEventListener('click', onGoLink)
+list.addEventListener(`click`, onGoLink)
 function onGoLink (event) {
    event.preventDefault()
   };
@@ -60,14 +60,14 @@ const instance = basicLightbox.create(`
 </div>
 `); 
 
-// itemList.addEventListener ('click', onClickModal)
+// itemList.addEventListener (`click`, onClickModal)
 // function  onClickModal (event){
 //   event.target;
 //    instance = basicLightbox.create(`
 //    <img src="assets/images/image.png" width="800" height="600">
 // `)}
 
-listItem.addEventListener('click', onOpenModal)
+listItem.addEventListener(`click`, onOpenModal)
 function onOpenModal(event) {
   
   if ( event.target.nodeName === 'IMG'||event.target.nodeName === 'A') {
