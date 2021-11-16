@@ -47,12 +47,13 @@ const items = [...list.children];
 const linkList = document.querySelector('.gallery__link');
 const listItem = document.querySelector('.gallery__image');
 //Реализация делегирования на div.gallery и получение url большого изображения
-list.addEventListener(`click`, onGoLink)
-function onGoLink (event) {
+list.addEventListener(`click`, noGoLink)
+function noGoLink (event) {
    event.preventDefault()
    if ( event.target.nodeName === 'IMG') {
     return;}
   };
+  console.log('event.target.nodeName'event.target.nodeName)
   console.log(linkList)
   console.log(listItem);
 //  //import basicLightbox from '../node_modules/basiclightbox';
