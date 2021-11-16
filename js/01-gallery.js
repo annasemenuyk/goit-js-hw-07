@@ -69,7 +69,7 @@ const instance = basicLightbox.create(`
 
 listItem.addEventListener('click', onOpenModal)
 function onOpenModal(event) {
-  event.preventDefault()
+  
   if ( event.target.nodeName === 'IMG'||event.target.nodeName === 'A') {
    return instance.show()// відкриття модалки
  //заміна значення картинки
