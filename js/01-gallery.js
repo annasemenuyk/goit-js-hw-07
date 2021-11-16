@@ -51,7 +51,9 @@ list.addEventListener(`click`, noGoLink)
 function noGoLink (event) {
    event.preventDefault()
    if ( event.target.nodeName === 'IMG') {
-    return;}
+  
+    return;
+  }
   };
   console.log(`event`,event)
   console.log(linkList)
@@ -82,7 +84,7 @@ function onOpenModal() {
 };
 console.log(`click`,onOpenModal)
  //modal=document.querySelector('.modal')
- console.log(modal)
+ //console.log(modal)
 // modal.addEventListener('click', onModalCloseClick)
 
 listItem.addEventListener('click', ModalCloseClick)
