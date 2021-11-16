@@ -72,15 +72,17 @@ function onOpenModal(event) {
   if ( event.target.nodeName === 'IMG') {
   event.preventDefault();// відміна переходу по ссилці
   instance.show()// відкриття модалки
-  instance = basicLightbox.create(`
-<img src="assets/images/image.png" width="800" height="600">
-`)//заміна значення картинки
+//   instance = basicLightbox.create(`
+// <img src="assets/images/image.png" width="800" height="600">
+// `)//заміна значення картинки
   
    }
 } ;
-modal=document.querySelector('.modal')
-modal.addEventListener('click', onModalCloseClick)
-function onModalCloseClick (event){
+// modal=document.querySelector('.modal')
+// modal.addEventListener('click', onModalCloseClick)
+
+listItem.addEventListener('click', ModalCloseClick)
+function ModalCloseClick (event){
   { event.preventDefault();// відміна переходу по ссилці     
     instance.close() //закриття модального вікна
     listItem.src = '' // очищення значення картинки
