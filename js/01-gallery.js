@@ -75,12 +75,12 @@ function onOpenModal(event) {
   
    }
 } ;
-// listItem.addEventListener('click', onModalCloseClick)
-// function onModalCloseClick (){
-//   {      
-//     instance.close() //закриття модального вікна
-//     listItem.src = '' // очищення значення картинки
-//     listItem.alt = ''
-//   }
-// }
+listItem.addEventListener('click', onModalCloseClick)
+function onModalCloseClick (event){
+  { event.preventDefault();// відміна переходу по ссилці     
+    instance.close() //закриття модального вікна
+    listItem.src = '' // очищення значення картинки
+    listItem.alt = ''
+  }
+}
 console.log(onOpenModal)
