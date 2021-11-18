@@ -73,12 +73,9 @@ function onGalleryItemClick(event) {
 //     instance.close()// close modal here;
 //     }
 //   }
-const imageEsc = document.querySelector('.gallery__image')
-imageEsc.addEventListener('keydown', onEscKeyPress)
+window.addEventListener('keydown', onEscKeyPress)
   function onEscKeyPress(event) {
-    const ESC_KEY_CODE = 'Escape';
-    const pressEscKey = event.code === ESC_KEY_CODE;
-    if (pressEscKey) {
-      instance.close()
+    if (event.code === 'Escape'||instance.visible()) {
+      instance.close();
     }
   }
