@@ -40,9 +40,8 @@ const markup = createItemCards (galleryItems);
  console.log (markup);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
-const items = [...list.children];
-console.log(items)
- //Реализация делегирования на div.gallery и получение url большого изображения
+
+//Реализация делегирования на div.gallery и получение url большого изображения
 //  Открытие модального окна по клику на элементе галереи. Для этого ознакомься с документацией и примерами.
 
 list.addEventListener(`click`, onGalleryItemClick)
