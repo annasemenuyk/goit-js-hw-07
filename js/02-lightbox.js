@@ -22,36 +22,41 @@ const markup = createItemCards (galleryItems);
 // console.log (markup);
 const list = document.querySelector('.gallery');
 list.insertAdjacentHTML("afterbegin", markup);
+const items = [...list.children];
 // Инициализация библиотеки после того как элементы галереи созданы и добавлены в div.gallery. 
 // Для этого ознакомься с документацией SimpleLightbox - в первую очередь секции «Usage» и «Markup».
 // Посмотри в документации секцию «Options» и добавь отображение подписей к изображениям из атрибута alt.
 // Пусть подпись будет снизу и появляется через 250 миллисекунд после открытия изображения.
+
 const captionOptions = {
-   captions: true,//показать подписи, если они есть или нет
-   captionSelector: 'img',//установить элемент, в котором находится заголовок. Установите для самого A-Tag значение «self» или используйте обратный вызов, который возвращает элемент.
+    captions: true,//показать подписи, если они есть или нет
+    captionSelector: 'img',//установить элемент, в котором находится заголовок. Установите для самого A-Tag значение «self» или используйте обратный вызов, который возвращает элемент.
     captionType: 'attr',//как получить подпись. Вы можете выбирать между attr, data или text
     captionsData: 'alt',//получить заголовок из данного атрибута
     captionPosition: 'bottom',//положение подписи. Возможны следующие варианты: верх, низ или снаружи
     captionDelay: 250,//добавляет задержку перед отображением заголовка (в мс)
     //enableKeyboard: true,//разрешить навигацию со стрелками на клавиатуре и закрыть клавишей ESC
-};//Создание объекта
-//Установите для самого A-Tag значение «self» или используйте обратный вызов, который возвращает элемент
-let simpleLightboxGallery = new SimpleLightbox('.gallery a', captionOptions);
-console.log(createItemCards(galleryItems))
+   };//Создание объекта
+   list.addEventListener(`click`, GalleryItemClick);
+function GalleryItemClick(event) {
+    event.preventDefault();
+    console.log(`event`,event.target)
+    if (event.target.nodeName === 'A' || event.target.nodeName === 'IMG') {
+     return;   
+  }
+  captionOptionsElement.captionType = captionOptionsElement.captionType.getAttribute('alt')
+}
+console.log(createItemCards(galleryItems));
 list.addEventListener(`click`, elementCaptionOptions);
 function elementCaptionOptions() {
     let captionOptionsElement = {};
-    return captionOptionsElement
-}
-list.addEventListener(`click`, GalleryItemClick);
-function GalleryItemClick(event) {
-    event.preventDefault();
-    if (event.target.nodeName === 'A' || event.target.nodeName === 'IMG') {
-        captionOptionsElement = event.target;
-        simpleLightboxGallery.on('show.simplelightbox')
-    }
-}
-
-
-
-
+    return captionOptionsElement;
+};//Установите для самого A-Tag значение «self» или используйте обратный вызов, который возвращает элемент
+// let gallery = new SimpleLightbox('.gallery a');
+// gallery.on('show.simplelightbox', function () {
+// 	// do something…
+// });
+let simpleLightboxGallery = new SimpleLightbox('.gallery a', captionOptions);
+simpleLightboxGallery.on('show.simplelightbox', function () {
+    open// do something…
+    });
