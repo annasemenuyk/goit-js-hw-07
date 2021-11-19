@@ -44,7 +44,7 @@ function GalleryItemClick(event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'IMG') {
      return;   
   }
-  captionOptionsElement.captionType = captionOptionsElement.captionType.getAttribute('alt')
+  captionOptionsElement = `${event.target.getAttribute('alt')}`
 }
 console.log(createItemCards(galleryItems));
 list.addEventListener(`click`, elementCaptionOptions);
